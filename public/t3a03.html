@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <h6>Version 0.0.1.</h6>
+
+  <h1 align=center>t3a03-forms-fred.html</h1>
+  <font color=blue> Prove you can use: Forms</font><br>
+
+  The following are all form elements (add to them):<br>
+  <form >
+
+    Enter Your First Name:<input type=text id="myText01" value="Fred"><br>
+    Checkbox: <br>
+    Beef:<input type=checkbox><br>
+    Veggy: <input type=checkbox><br>
+    Radio Buttons:<br>
+     107.7 <input type=radio name="myRad01" value=""><br>
+     83.5 <input type=radio name="myRad01" value=""><br>
+
+    hidden:<input type=hidden ><br>
+    File:<input type=file><br>
+    reset:<input type =reset><br>
+    Submit (advanced)<input type=submit><br>
+
+    Button: <input type=button value="click" onclick="{
+       document.getElementById('myArea01').value = 'Cool'
+    }"><br>
+    Textarea:<br>
+   <textarea id="myArea01" cols=60 rows=5 > wow </textarea><br>
+
+    Select Box:<BR>
+    <select id="mySelect01" size=2 onChange="{
+      document.getElementById('myArea01').value = document.getElementById('mySelect01').value
+     }">
+      <option value='myOne'>One
+      <option value='myTwo'>Two
+      <option value='myThree'>Three
+    </select>
+  </form>
