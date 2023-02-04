@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <h6>Version 0.0.3.</h6>
+<head>
+  <title>
+    forms
+  </title>
+<head>
+<body>
+  <h6>Version 0.0.34.</h6>
 
   <h1 align=center>t3a03-forms-by-aaron.html</h1>
   <font color=blue> Prove you can use: Forms</font><br>
@@ -8,15 +14,16 @@
   The following are all form elements (add to them):<br>
   <form >
     <label for="name">Name Here</lable>
-    <input type=text id="name"><br>
+    <input type="text" id="name"><br>
     Checkbox: <br>
     <label for="beef">Beef</label>
-    <input id="beef" type=checkbox><br>
+    <input id="beef" type="checkbox"><br>
     <label for="veggy">Veggy</label>
-    <input id="veggy" type=checkbox><br>
-    Radio Buttons:<br>
-     107.7 <input type=radio name="myRad01" value=""><br>
-     83.5 <input type=radio name="myRad01" value=""><br>
+    <input id="veggy" type="checkbox"><br>
+    Do you like Pickles:<br>
+     Yes <input type="radio" name="myRad01" value=""><br>
+     No <input type="radio" name="myRad01" value=""><br>
+     Maybe so <input type=radio name="myRad01" value""><br>
 
     hidden:<input type=hidden ><br>
     File:<input type=file><br>
@@ -29,13 +36,14 @@
     Textarea:<br>
    <textarea id="myArea01" cols=60 rows=5 > wow </textarea><br>
 
-    Select Box:<BR>
+    Favourite Burger:<BR>
     <select id="mySelect01" size=2 onChange="{
       document.getElementById('myArea01').value = document.getElementById('mySelect01').value
      }">
-      <option value='myOne'>One
-      <option value='myTwo'>Two
-      <option value='myThree'>Three
+      <option value='myOne'>Beef
+      <option value='myTwo'>Chicken
+      <option value='myThree'>Pulled Pork
     </select>
   </form>
+</body>
 </html>
