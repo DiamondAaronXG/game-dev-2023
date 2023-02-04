@@ -6,7 +6,7 @@
   </title>
 <head>
 <body>
-  <h6>Version 0.0.34.</h6>
+  <h6>Version 0.0.5</h6>
 
   <h1 align=center>t3a03-forms-by-aaron.html</h1>
   <font color=blue> Prove you can use: Forms</font><br>
@@ -36,14 +36,13 @@
     Textarea:<br>
    <textarea id="myArea01" cols=60 rows=5 > wow </textarea><br>
 
-    Favourite Burger:<BR>
-    <select id="mySelect01" size=2 onChange="{
-      document.getElementById('myArea01').value = document.getElementById('mySelect01').value
-     }">
-      <option value='myOne'>Beef
-      <option value='myTwo'>Chicken
-      <option value='myThree'>Pulled Pork
-    </select>
+    <label for="burger">
+    <input list="burger">
+      <datalist id="burger"/>
+        <option value="Beef" />Beef
+        <option value="Chicken" />Chicken
+        <option value="Pulled Pork"/ >Pulled Pork
+      </datalist>
   </form>
 </body>
 </html>
