@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-Version 0.1.1</br>
+Version 0.1.2</br>
 <head>
   <title>
     CSS
@@ -30,6 +30,18 @@ div.circle {
   height: 250px;
   background: #2762e9;
   border-radius: 50%;
+}
+	  div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
 }
   </style>
 </head>
@@ -77,6 +89,7 @@ Advanced see if you move this textarea
 </div><br><br>
 	<span>A Circle</span><br><br>
 <div class="circle"></div>
+<div></div>
 </body>
 </html>
 
