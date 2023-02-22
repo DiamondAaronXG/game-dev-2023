@@ -77,15 +77,15 @@ Javascript innerHTML value by Fred</a>
 }"><br>
 
 <div id="myDiv01">...</div>
+    <div id="myDiv02">...</div>
 
-<button type="button" onclick="document.write(5 + 6)">Try it</button>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     
-    <button type="button" onclick="document.write(2 + 2)">2+2</button>
-<button type="button" onclick="document.write(4 + 4)">4+4</button>
-<button type="button" onclick="document.write(8 + 8)">8+8</button>
-<button type="button" onclick="document.write(12 + 12)">12+12</button>
-<button type="button" onclick="document.write(50 + 50)">50+50</button>
+<button type="button" onclick="document.getElementById('myDiv02').innerHTMl = 2 + 2">2+2</button>
+<button type="button" onclick="document.getElementById('myDiv02').innerHTMl = 4 + 4">4+4</button>
+<button type="button" onclick="document.getElementById('myDiv02').innerHTMl = 8 + 8">8+8</button>
+<button type="button" onclick="document.getElementById('myDiv02').innerHTMl = 12 + 12">12+12</button>
+<button type="button" onclick="document.getElementById('myDiv02').innerHTMl = 50 + 50">50+50</button>
 
 
 <script>
