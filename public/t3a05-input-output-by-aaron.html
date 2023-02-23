@@ -1,4 +1,32 @@
 <!DOCTYPE html>
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<script type="text/javascript">
+    function setOpacity(id, level) {
+        element = document.getElementById(id);
+        element.style.opacity = level;
+    }
+</script>
+<html>
 <head>
     <title>
            input-output
@@ -50,10 +78,18 @@ body {
   background-color: #555;
 }
 </style>
+<style type="text/css">
+    .planetmarker {
+        position: absolute;
+        z-index:1;
+        background-color: #ff9999;
+        opacity: 0;
+    }
+</style>
 </head>
 <body>
 
-Version 0.0.9
+Version 0.1.0
 
 <h2 align=center>t3a05-input output by Aaron</h2>
 
@@ -88,26 +124,11 @@ Javascript innerHTML value by Fred</a>
     <Span> scroll down...</span>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<script>
-// Get the button
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
+<div id="planetmap">
+    <img id="backgroundimage" src="demo_usa.png" width="960" height="593" alt="Planets"/>
+    <div id="planet.1" class="planetmarker" style="left:0px;top:0px;width:120px;height:126px;" onMouseOver="setOpacity(this.id, 1);" onMouseLeave="setOpacity(this.id, 0);">
+    </div>
+</div>
     
 </body>
+</html>
