@@ -86,25 +86,16 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 
 <div id="myDiv01"><font color=red>...</font></div>
 
-let i = 0;
+for (let i = 0, len = cars.length, text = ""; i < len; i++) {
+  text += cars[i] + "<br>";
+}
+                                                      
+let i = 2;
 let len = cars.length;
 let text = "";
-for (; i < len; ) {
+for (; i < len; i++) {
   text += cars[i] + "<br>";
-  i++;
 } 
-
-var i = 5;
-
-for (var i = 0; i < 10; i++) {
-
-}
-
-let i = 5;
-
-for (let i = 0; i < 10; i++) {
-
-}
 
 </body>
 </html>
