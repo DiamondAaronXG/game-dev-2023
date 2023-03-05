@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+Version 0.0.1
+
+<h2 align=center>t3a08-loops-by-aaron.html</h2>
+
+<a href="">Good reference to Javascript Loops</a><br>
+
+
+<h4> Example input output code</h4>
+<pre>
+
+</pre>
+
+<h4> Example working code</h4>
+
+Max loops: <input id="myNum01" type=number value="4" ><br> 
+
+<input type=button value="Basic For loop with Decisions" onclick="{
+    document.getElementById('myDiv01').innerHTML = ''
+    let myTemp = ''
+
+    let myMax = parseInt(document.getElementById('myNum01').value)
+
+    for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+
+       if (myLoop * 2 > myMax){
+          myTemp += ' cool '
+      }
+
+      myTemp += 'Loop number: ' + myLoop + '<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = myTemp 
+}">
+
+
+<input type=button value="Basic For loop only" onclick="{
+    let myTemp = ''
+    let myMax = parseInt(document.getElementById('myNum01').value)
+    for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+      myTemp += 'Loop number: ' + myLoop + '<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = myTemp 
+}">
+
+
+
+<input type=button value="Even number identifier" onclick="{
+    document.getElementById('myDiv01').innerHTML = ''
+    let myTemp = ''
+
+    let myMax = parseInt(document.getElementById('myNum01').value)
+
+    for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+
+       if (myLoop % 2 == 0){
+          myTemp += 'Even Number, '
+      }
+
+      myTemp += 'Loop number: ' + myLoop + '<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = myTemp 
+}">
+
+
+<input type=button value="Odd number identifier" onclick="{
+    document.getElementById('myDiv01').innerHTML = ''
+    let myTemp = ''
+
+    let myMax = parseInt(document.getElementById('myNum01').value)
+
+    for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+
+       if (myLoop % 2 == 1){
+          myTemp += '<font style=\'color:red;\'> Odd </font>'
+      }
+
+      myTemp += 'Loop number: ' + myLoop + '<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = myTemp 
+}">
+
+<div id="myDiv01"><font color=red>...</font></div>
+
+let i = 0;
+let len = cars.length;
+let text = "";
+for (; i < len; ) {
+  text += cars[i] + "<br>";
+  i++;
+} 
+
+var i = 5;
+
+for (var i = 0; i < 10; i++) {
+
+}
+
+let i = 5;
+
+for (let i = 0; i < 10; i++) {
+
+}
+
+</body>
+</html>
