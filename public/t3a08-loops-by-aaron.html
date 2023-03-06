@@ -4,7 +4,7 @@
 </head>
 
 <body>
-Version 0.0.6
+Version 0.0.7
 
 <h2 align=center>t3a08-loops-by-aaron.html</h2>
 
@@ -83,6 +83,9 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
     }
     document.getElementById('myDiv01').innerHTML = myTemp 
 }">
+    
+    <input type=button value="Cars" onclick=cars()>
+                                            
 
 <div id="myDiv01"><font color=red>...</font></div>
     
@@ -91,12 +94,15 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 <p id="car01"></p>
 
 <script>
+    
+    function cars(){
 const cars = ["BMW", "Volvo", "Saab", "Ford"];
 let i, len, text;
 for (i = 0, len = cars.length, text = ""; i < len; i++) {
   text += cars[i] + "<br>";
 }
 document.getElementById("car01").innerHTML = text;
+    }
     </script>
     
 </body>
