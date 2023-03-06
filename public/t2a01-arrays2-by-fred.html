@@ -1,0 +1,46 @@
+
+
+Version 0.0.1
+
+<h2 align=center>t2a01-arrays-by-Fred.html</h2>
+
+<a href="">Good reference to Javasccript Arrays</a><br>
+
+Arrays are stored numbered variables
+
+<h4> Example Array code</h4>
+<pre>
+   myArray = new Array()
+   myArray[0] = 'Fred'
+   myArray[1] = 'Mary'
+
+</pre>
+
+<h4> Example working Array code</h4>
+
+
+Max Array Entry: <input type=text id="myText01" value="3"><br>
+
+<input type=button value="Example onClick" onClick="{
+   let myTemp = document.getElementById('myText01').value
+   let mySum = ''
+   document.getElementById('myDiv01').innerHTML = ' '
+
+   myArray = new Array()
+   myArray[0] = 'Fred'
+   myArray[1] = 'Mary'
+   myArray[2] = 'Zizzy'
+
+   for (let myLoop=0;   myLoop < myTemp;  myLoop++){
+      mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] +'<br>'
+   }
+   document.getElementById('myDiv01').innerHTML = mySum
+}">
+
+<div id="myDiv01">...</div>
+
+
+<br>
+
+You do at least 7 other arrays:<br>
+
