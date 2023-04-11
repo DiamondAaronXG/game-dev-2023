@@ -21,14 +21,14 @@
 
 <input type=button value="decrypt" onclick="{
    let myTemp = ''
-   myString = document.getElementById('myArea01').value.toLowerCase().split('')
+   myString = document.getElementById('myArea02').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
       if (myString[myLoop] == 'f') {myTemp  = 'e'} 
       if (myString[myLoop] == 'i') {myTemp  = 'h'}
       myString[myLoop] = myTemp
    }
-   document.getElementById('myArea02').value = myString.join('')
+   document.getElementById('myArea03').value = myString.join('')
 }"><br><br>
 
 
