@@ -1,4 +1,4 @@
-<h6>version 0.0.2</h6>
+<h6>version 0.0.3</h6>
 <h1 align=center>t2a06-spy-by-aaron.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -24,8 +24,8 @@
    myString = document.getElementById('myArea01').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if (myString[myLoop] == 'a') {myTemp  = 'z'} 
-      
+      if (myString[myLoop] == 'f') {myTemp  = 'e'} 
+      if (myString[myLoop] == 'i') {myTemp  = 'h'}
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea02').value = myString.join('')
