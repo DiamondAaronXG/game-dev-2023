@@ -1,4 +1,4 @@
-<h6>version 0.1.0</h6>
+<h6>version 0.1.1</h6>
 <h1 align=center>t4a12-sort-by-aaron</h1>
 
 
@@ -25,7 +25,7 @@
   let myTemp = 0
   for ( let myLoop2 = 0;   myLoop2 < myMax;  myLoop2++){
   for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
-     if (myCards[myLoop2] >= myCards[myLoop2 + 1]) {
+     if (myCards[myLoop2] <= myCards[myLoop2 + 1]) {
      myTemp = myCards[myLoop]
      myCards[myLoop] = myCards[myLoop + 1]
      myCards[myLoop + 1] = myTemp
