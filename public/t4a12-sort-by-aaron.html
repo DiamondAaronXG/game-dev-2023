@@ -1,4 +1,4 @@
-<h6>version 0.0.8</h6>
+<h6>version 0.0.9</h6>
 <h1 align=center>t4a12-sort-by-aaron</h1>
 
 
@@ -23,13 +23,12 @@
 
 <input type=button value="Sort" onclick="{
   let myTemp = 0
+  for ( let myLoop2 = 0;   myLoop2 < myMax;  myLoop2++){
   for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
-     if (myCards[myLoop] <= myCards[myLoop + 1]) {
+     if (myCards[myLoop2] >= myCards[myLoop2 + 1]) {
      myTemp = myCards[myLoop]
      myCards[myLoop] = myCards[myLoop + 1]
-     myCards[myLoop + 1] = myTemp 
-        }
-       }
- }">
+     myCards[myLoop + 1] = myTemp
+ }}}">
 
 <dir id="myDiv01"></div>
