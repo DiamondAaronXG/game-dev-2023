@@ -1,3 +1,5 @@
+<h6>version 0.0.2</h6>
+
 <h2 align=center>t4a08-canvas-by-aaron</h2>
 You use loops and variables to make fast fancy drawings <br><br>
 
@@ -62,4 +64,16 @@ You use loops and variables to make fast fancy drawings <br><br>
    // set up global variables
    let myCanvas=document.getElementById('myCoolTag');
    let myContext=myCanvas.getContext('2d');
+   
+   var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// Create gradient
+var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
 </script>
