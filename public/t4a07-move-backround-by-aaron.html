@@ -1,4 +1,4 @@
-<h6>version 0.0.5</h6>
+<h6>version 0.0.6</h6>
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="big-chonk.jpg">
 
 <script>
@@ -23,14 +23,14 @@
    <input id="myButton01" type=button value="background move down" onclick="{
   myTemp = '100px 0px'
   myGlobalX -= 5
-  myTemp = 'px ' + myGlobalX + '0px'
+  myTemp = '0px ' + myGlobalX + 'px'
   document.getElementById('myBody').style.backgroundPosition =myTemp
 }">
    
    <input id="myButton01" type=button value="background move up" onclick="{
   myTemp = '100px 0px'
   myGlobalX += 5
-  myTemp = 'px ' + myGlobalX + '0px'
+  myTemp = '0px ' + myGlobalX + 'px'
   document.getElementById('myBody').style.backgroundPosition =myTemp
 }">
    
