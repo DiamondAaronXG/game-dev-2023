@@ -1,3 +1,4 @@
+<h6>version 0.0.3</h6>
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="big-chonk.jpg">
 
 <script>
@@ -11,7 +12,29 @@
   myTemp =  myGlobalX + 'px 0px'
   document.getElementById('myBody').style.backgroundPosition =myTemp
 }">
+   
+   <input id="myButton01" type=button value="background move right" onclick="{
+  myTemp = '100px 0px'
+  myGlobalX += 5
+  myTemp =  myGlobalX + 'px 0px'
+  document.getElementById('myBody').style.backgroundPosition =myTemp
+}">
 
+   <input id="myButton01" type=button value="background move left" onclick="{
+  myTemp = '100px 0px'
+  myGlobalX -= 5
+  myTemp = '100px' + myGlobalX + 'px'
+  document.getElementById('myBody').style.backgroundPosition =myTemp
+}">
+   
+   <input id="myButton01" type=button value="background move left" onclick="{
+  myTemp = '100px 0px'
+  myGlobalX += 5
+  myTemp =  myTemp = '100px' + myGlobalX + 'px'
+  document.getElementById('myBody').style.backgroundPosition =myTemp
+}">
+   
+   
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
   myClock = setInterval(function(){
