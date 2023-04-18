@@ -6,56 +6,6 @@
    let myMax = 52      // 52 when working
    let myCards = new Array(myMax) 
    
-   var numbers = [];
-    function init(){
-        document.getElementById("reset").disabled = true;
-        document.getElementById("sort").disabled = true;
-    }
-
-    function generateNumbers() {
-        document.getElementById("result").innerHTML = "Generated some Numbers."
-
-        document.getElementById("generate").disabled = true;
-        document.getElementById("sort").disabled = false;
-
-
-        for (var i = 0; i < 20; i++) {
-            numbers[i] = Math.floor(Math.random() * 52);
-            document.getElementById("numbers").innerHTML += numbers[i] + "<br>";
-            numbers[i] = numbers[i];
-        }
-        return numbers;
-    }
-
-    function sortNumbers() {
-        document.getElementById("result").innerHTML = "Sorted Numbers."
-        document.getElementById("sort").disabled = true;
-        document.getElementById("reset").disabled = false;
-
-
-
-        numbers.sort(function (a, b) {
-            return a - b;
-        });
-        for (var i = 0; i < numbers.length; i++) {
-            document.getElementById("sortedNumbers").innerHTML += numbers[i] + "<br>";
-        }
-
-        
-
-    }
-    function reset() {
-        numbers = [];
-        document.getElementById("numbers").innerHTML = "";
-        document.getElementById("sortedNumbers").innerHTML = "";
-        document.getElementById("generate").disabled = false;
-        document.getElementById("sort").disabled = true;
-        document.getElementById("reset").disabled = true;
-        document.getElementById("result").innerHTML = "Resetted Numbers.";
-
-        
-
-    }
 </script>
 
 <input type=button value="Set Random" onclick="{
@@ -86,5 +36,7 @@
                                                                                            
                                                                                            
 }">
+
+<input type=button value="Fancy Sort" onclick="{
 
 <div id="myDiv01"></div>
