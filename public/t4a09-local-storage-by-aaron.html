@@ -1,4 +1,4 @@
-<h6>version 0.0.2</h6>
+<h6>version 0.0.3</h6>
 <h2>t4a09-local-storage-by-aaron. Instructions:</h2>
 
 <body onload="{
@@ -30,7 +30,7 @@ Text example: <input id="myText3" type=text size=70 value="" placeholder="Write 
 
 <input type="button" value="Store Text" onClick="{
    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
-   alert(document.getElementById('myText1').value + ' \nHas been stored')
+   
    document.getElementById('myText1').value = ''
 }">
 
@@ -44,7 +44,7 @@ Text example: <input id="myText3" type=text size=70 value="" placeholder="Write 
 
 <input type="button" value="Store Text2" onClick="{
    localStorage.setItem('myStoredText2', document.getElementById('myText2').value)
-   alert(document.getElementById('myText2').value + ' \nHas been stored')
+  
    document.getElementById('myText2').value = ''
 }">
 
@@ -59,7 +59,7 @@ Text example: <input id="myText3" type=text size=70 value="" placeholder="Write 
 
 <input type="button" value="Store Text3" onClick="{
    localStorage.setItem('myStoredText3', document.getElementById('myText3').value)
-   alert(document.getElementById('myText3').value + ' \nHas been stored')
+   
    document.getElementById('myText3').value = ''
 }">
 
