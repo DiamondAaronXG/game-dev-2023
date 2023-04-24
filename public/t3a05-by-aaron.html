@@ -1,0 +1,190 @@
+<input type="text" id="myTextIn01" value="Stuff written here" size="30">  
+    
+<input id="myButton123" type="button" value="Input / Output" onclick="{
+      document.getElementById('myDiv123').innerHTML = document.getElementById('myTextIn01').value // note: use value not innerHTML                                                    
+}"><br><br>
+
+<div id='myDiv123'>...</div><br>
+This code puts in text
+<hr>
+<input type="text" id="myTextIn1" value="3.45" size="30">  + <input type="text" id="myTextIn2" value="6.78" size="30"> 
+
+<input id="myButton124" type="button" value="Add the numbers" onclick="{
+   var my1 = document.getElementById('myTextIn1').value  
+   var my2 = document.getElementById('myTextIn2').value  
+   document.getElementById('myDiv124').innerHTML =   'Numbers added as strings ' +  my1 + ' + ' +  my2 + ' = ' +  (my1 + my2)  + '<br>'   
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added as integers ' +  my1 + ' + ' +  my2 + ' = ' +  (parseInt(my1) + parseInt(my2))  + '<br>'   
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added as rounded integers ' +  my1 + ' + ' +  my2 + ' = ' +  (Math.round(my1) + Math.round(my2))  + '<br>'                                                      
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added as floating point (decimal) numbers ' +  my1 + ' + ' +  my2 + ' = ' +  (parseFloat(my1) + parseFloat(my2))  + '<br>'                                         
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added using *1 trick ' +  my1 + ' + ' +  my2 + ' = ' +  (my1*1 + my2*1)  + '<br>'                                                       
+                                                             
+                                                              
+}"><br><br>
+
+<div id='myDiv124'>...</div><br>
+This code works as a calculator
+<hr>
+Loop this many times <input type="number" id="myTextLoop" value="10" size="10"> 
+    
+<input id="myButton125" type="button" value="For Loop" onclick="{
+                                                               
+    document.getElementById('myDiv125').innerHTML = ''   // blank out the DIV  
+                                                               
+    for (myLoop = 0;  myLoop <= document.getElementById('myTextLoop').value;    myLoop++){   
+                                                               
+       document.getElementById('myDiv125').innerHTML += 'Loop #'+ myLoop+'<br>'  
+                                                               
+    }
+                                                               
+}"><br><br>
+
+<div id='myDiv125'>...</div><br>
+This code allows for multiple loops
+<hr>
+Change the number <input type="number" id="myTextIf" value="4" size="10">     
+    
+<input id="myButton126" type="button" value="If Statements" onclick="{
+      
+   document.getElementById('myDiv126').innerHTML = '' // Clear the DIV
+                                                                    
+   myIf =   document.getElementById('myTextIf').value   // Store the number
+     
+   if (myIf == 4){                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number equals 4 <br>'
+   }   
+                                                                    
+   if (myIf <= 4){                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number is less than 4 <br>'
+   }  
+                                                                            
+   if (Math.abs(myIf) == 4){        // absolute value of -4 = 4                                                         
+      document.getElementById('myDiv126').innerHTML += 'That number is either positive or negative 4<br>'
+   }  
+                                                                        
+   if (myIf < 0){                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number is a negative number<br>'
+   }  
+                                                                    
+   if (myIf == 4){                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number is less than or equal to 4 <br>'
+   }   
+                                                                    
+   if (myIf >= 4){                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number is greater than or equal to 4 <br>'
+   }   
+                                                                    
+   if (myIf != 4){                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number does not equal 4 <br>'
+   }   
+                                                                    
+   if ((myIf == 4) || (myIf == 8)) {                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number equals either 4 or 8 <br>'
+   }     
+                                                                       
+                                                                    
+   if ((myIf == 4) &amp;&amp; (myIf < 8)) {                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number equals 4 and is less than 8 <br>'
+   }     
+                                                                       
+                                                                    
+                                                                   
+}"><br><br>
+
+<div id='myDiv126'>...</div><br>
+This is an if code "if" anything were to equal 4 the code works, if it isnt 4 it wont work
+Store these numbers in an array <input type="text" id="myTextArray" value="3, 7, 9" size="10">        
+    
+<input id="myButton127" type="button" value="Store and show array" onclick="{
+                                                              
+      myArray = []
+      document.getElementById('myDiv127').innerHTML = '' // clear the DIV
+                                                              
+      myArray = document.getElementById('myTextArray').value.split(',')   //splits a string into an array  
+                                                              
+      for (myIndex in myArray){                                                                                                                  
+         document.getElementById('myDiv127').innerHTML +=     myIndex + ' stores : ' + myArray[myIndex] + '<br>'
+      }                                                        
+}"><br><br>
+
+<div id='myDiv127'>...</div><br>
+This code stores information inside another
+<hr>    
+Store these Items in a Javascript object <br>
+    <textarea id="myTextAreaObject" rows="8" cols="70" wrap="false">{
+   "firstName": "John",
+   "lastName": "Doe",
+   "age": 50,
+   "eyeColor": "blue"
+}
+    </textarea><br> 
+    
+<input id="myButton128" type="button" value="Store as an object" onclick="{
+      
+    var myPerson = {}                                                              
+    myPerson = JSON.parse(document.getElementById('myTextAreaObject').value)   
+                                                                         
+    document.getElementById('myDiv128').innerHTML = 'Name: ' + myPerson.firstName + ' '+ myPerson.lastName + ', Age: '  + myPerson.age  + ', EyeColor: ' + myPerson.eyeColor + '<br>'
+                                                       
+                                                              
+}"><br><br>
+
+<div id='myDiv128'>...</div><br>
+this code is given specifics on what a person looks like and describes about them
+<input id="myButton129" type="button" value="Make and use a function" onclick="{
+function myFun(myVar){
+  document.getElementById('myDiv129').innerHTML = 'The function made this line. ' + myVar + ' was passed to the function <br>'                                                                     
+}                                                                     
+                                                                      
+myFun('28')      // This activates the function                                                                 
+                                                                      
+}"><br><br>
+
+<div id='myDiv129'>...</div><br>
+This code is a function 
+<hr>
+<input id="myButton130" type="button" value="Make and Show the class myAnimal" onclick="{
+                                                                                 
+ class myAnimal {
+    constructor(passName, passAge) {
+       this.myName = passName;
+       this.myAge = passAge;
+    }
+    myShow(){
+       document.getElementById('myDiv130').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+    }
+ }  // end class myAnimal
+                                                             
+   
+                                                                                 
+   myDog = new myAnimal('Snickers', 5)
+   myDog.myShow()                                                       
+}"><br><br>
+
+<div id='myDiv130'>...</div><br>
+This code is an example of a class
+<hr>
+<input id="myButton131" type="button" value="Extend a class" onclick="{
+class myAnimal {
+    constructor(passName, passAge) {
+       this.myName = passName;
+       this.myAge = passAge;
+    }
+    myShow(){
+       document.getElementById('myDiv131').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+    }
+ }  // end class myAnimal
+                                                             
+class myCat extends myAnimal {                                                                      
+     myShow(){
+       document.getElementById('myDiv131').innerHTML = this.myName + ' is a great cat who is ' + this.myAge + ' years old<br>'
+    }                                                                   
+}    // end extended class myCat
+                                                                     
+                                                              
+                                                                                                                                                                                                       
+   myPet = new myCat('Fluffy', 14)
+   myPet.myShow()                                                                           
+}"><br><br>
+
+<div id='myDiv131'>...</div><br>
+This is an example of extending a classes
