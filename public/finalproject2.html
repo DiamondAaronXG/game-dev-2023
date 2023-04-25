@@ -1,7 +1,164 @@
 <html>
 	<head>
 	  <title>CurryClicker</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style>
+ 			body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f39c12;
+}
+
+button {
+  background-color: #f1c40f;
+  font-size: 18px;
+  border: 0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  box-shadow: inset 0 0 0 5px #000;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+::-webkit-input-placeholder {
+   color: #777;
+}
+
+:-moz-placeholder {
+   color: #777;
+}
+
+::-moz-placeholder {
+   color: #777;
+}
+
+:-ms-input-placeholder {
+   color: #777;
+}
+
+input {
+  background-color: #f1c40f;
+  font-size: 18px;
+  border: 0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  outline: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#ragu {
+  width: 120px;
+  height: 120px;
+  border-radius: 70px;
+  -webkit-animation: rotating 10s linear infinite;
+  -moz-animation: rotating 10s linear infinite;
+  -ms-animation: rotating 10s linear infinite;
+  -o-animation: rotating 10s linear infinite;
+  animation: rotating 10s linear infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+#ragu:hover {
+    box-shadow: 0px 0px 30px #fff;
+    animation-name: pulse;
+    animation-duration: 3s;
+}
+
+#assets {
+  position: relative;
+  text-align: center;
+  top: 10px;
+}
+
+.asset {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 20px;
+  border-width: 1px;
+}
+
+#currency {
+  font-size: 35px;
+  font-weight: bold;
+  color: green;
+  -webkit-text-stroke: 1px black;
+}
+
+#sec {
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+  -webkit-text-stroke: 1px black;
+}
+
+#msg {
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  background-color: red;
+  padding: 10px;
+  display: none;
+  border-radius: 20px;
+  color: #fff;
+}
+
+#comment {
+  margin-top: 10px;
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+		</style>
 	</head>
 	<body>
 	  <div id="msg">You need more shekels, good sir!</div>
@@ -45,6 +202,123 @@
 		<br>
 		<button onclick="betCurry()">Bet Curry</button>
 		</div>
-		<script type="text/javascript" src="main.js"></script>
+		<script>
+			var curry = 0;
+var stoves = 0;
+var grandmas = 0;
+var restaurants = 0;
+var factories = 0;
+
+var message = false;
+
+function curryClick(number) {
+    curry = curry + number;
+    document.getElementById("curry").innerHTML = comma(curry);
+    document.title = comma(curry) + " | CurryClicker";
+}
+
+function buyStove() {
+    var stoveCost = Math.floor(10 * Math.pow(1.15,stoves));
+    if(curry >= stoveCost) {
+        stoves = stoves + 1;
+    	  curry = curry - stoveCost;
+        document.getElementById('stoves').innerHTML = stoves;
+        document.getElementById('curry').innerHTML = comma(curry);
+    } else {
+        error();
+    }
+    var nextCost = Math.floor(10 * Math.pow(1.15,stoves));
+    document.getElementById('stoveCost').innerHTML = nextCost;
+}
+
+function buyGrandma() {
+    var grandmaCost = Math.floor(100 * Math.pow(1.15,grandmas));
+    if(curry >= grandmaCost) {
+        grandmas = grandmas + 1;
+    	  curry = curry - grandmaCost;
+        document.getElementById('grandmas').innerHTML = grandmas;
+        document.getElementById('curry').innerHTML = comma(curry);
+    } else {
+        error();
+    }
+    var nextCost = Math.floor(100 * Math.pow(1.15,grandmas));
+    document.getElementById('grandmaCost').innerHTML = nextCost;
+}
+
+function buyRestaurant() {
+    var restaurantCost = Math.floor(1000 * Math.pow(1.15,restaurants));
+    if(curry >= restaurantCost) {
+        restaurants = restaurants + 1;
+    	  curry = curry - restaurantCost;
+        document.getElementById('restaurants').innerHTML = restaurants;
+        document.getElementById('curry').innerHTML = comma(curry);
+    } else {
+        error();
+    }
+    var nextCost = Math.floor(1000 * Math.pow(1.15,restaurants));
+    document.getElementById('restaurantCost').innerHTML = nextCost;
+}
+
+function buyFactory() {
+    var factoryCost = Math.floor(10000 * Math.pow(1.15,factories));
+    if(curry >= factoryCost) {
+        factories = factories + 1;
+    	  curry = curry - factoryCost;
+        document.getElementById('factories').innerHTML = factories;
+        document.getElementById('curry').innerHTML = comma(curry);
+    } else {
+        error();
+    }
+    var nextCost = Math.floor(10000 * Math.pow(1.15,factories));
+    document.getElementById('factoryCost').innerHTML = nextCost;
+}
+
+function betCurry() {
+    var betAmount = parseInt(document.getElementById('betAmount').value, 10);
+    if(curry >= betAmount) {
+      var betNumber = Math.floor((Math.random() * 100) + 1);
+      if (betNumber > 50) {
+        curry  = curry + betAmount;
+        document.getElementById('result').innerHTML = "You win " + comma(betAmount) + " curry.";
+      } else {
+        curry = curry - betAmount;
+        document.getElementById('result').innerHTML = "You lose " + comma(betAmount) + " curry.";
+      }
+      document.getElementById("curry").innerHTML = comma(curry);
+      document.title = comma(curry) + " | CurryClicker";
+    } else {
+        error();
+    }
+}
+
+function error() {
+  if (!message) {
+  message = true;
+  document.getElementById('msg').style.display = 'block';
+  window.setTimeout(function() {
+    message = false;
+    document.getElementById('msg').style.display = 'none';
+  }, 3000);
+  }
+}
+
+window.setInterval(function() {
+	var amount = (stoves * 0.1) + grandmas + (restaurants * 10) + (factories * 100);
+	curryClick(amount);
+  document.getElementById('sec').innerHTML = amount.toFixed(1) + " curry/s"
+	document.title = comma(curry) + ' | CurryClicker';
+}, 1000);
+
+window.setInterval(function() {
+  var comments = ["Keep making that curry!", "Yum, yum!", "Do the bakrichod!", "You're my habibi!", "Serving India with fresh curry since 1996!", "You fat bastard!", "I am the best tech support. Period.", "You can never get enough curry!"];
+  var comment = comments[Math.floor(Math.random()*comments.length)];
+  document.getElementById('comment').innerHTML = comment;
+}, 10000);
+
+
+function comma(x) {
+    return x.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+		</script>
 	</body>
 </html>
