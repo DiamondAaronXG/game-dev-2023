@@ -1,0 +1,50 @@
+<html>
+	<head>
+	  <title>CurryClicker</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+	  <div id="msg">You need more shekels, good sir!</div>
+		<img onclick="curryClick(1)" id="ragu" src="ragu.jpg">
+		<div id="comment">Click me to make curry!</div>
+		<div id="currency">Curry: <span id="curry">0</span></div>
+		<div id="sec">0 curry/s</div>
+		<div id="assets">
+		<div class="asset">
+		<button onclick="buyStove()">Buy Stove</button>
+		<br />
+		Stoves: <span id="stoves">0</span>
+		<br />
+		Stove Cost: <span id="stoveCost">10</span>
+		</div>
+    <div class="asset">
+		<button onclick="buyGrandma()">Buy Grandma</button>
+		<br />
+		Grandmas: <span id="grandmas">0</span>
+		<br />
+		Grandma Cost: <span id="grandmaCost">100</span>
+		</div>
+		<div class="asset">
+		<button onclick="buyRestaurant()">Buy Restaurant</button>
+		<br />
+		Restaurants: <span id="restaurants">0</span>
+		<br />
+		Restaurant Cost: <span id="restaurantCost">1000</span>
+		</div>
+		<div class="asset">
+		<button onclick="buyFactory()">Buy Factory</button>
+		<br />
+		Factories: <span id="factories">0</span>
+		<br />
+		Factory Cost: <span id="factoryCost">10000</span>
+		</div>
+		<br>
+		<div class="asset">
+		<input type="number" id="betAmount" placeholder="Enter amount...">
+		<div id="result">50/50 chance!</div>
+		<br>
+		<button onclick="betCurry()">Bet Curry</button>
+		</div>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
