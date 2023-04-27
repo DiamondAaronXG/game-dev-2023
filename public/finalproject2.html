@@ -249,14 +249,12 @@ function upgrade(name) {
       catown += 1;
       money -= catcost;
       catcost = catcost * 2;
-      document.getElementById("cat").innerHTML =
-        catown + "-clicker cat: " + addcomma(catcost) + " | +" + addcomma(catadd * cboost) + "Spice/sec";
-    } else if (catown == 50) {
-      document.getElementById("cat").innerHTML =
-        catown + "-clicker cat: MAX | +15% Spice/sec";
+      upown++;
+      reloadall();
     }
   }
-
+  
+  
   if (name == "worker") {
     if (money >= workercost && workerown < 50) {
       
