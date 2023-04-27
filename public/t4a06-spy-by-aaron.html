@@ -1,6 +1,6 @@
 <html>
 <body>
-<h6>version 0.0.6</h6>
+<h6>version 0.0.7</h6>
 <h1 align=center>t2a06-spy-by-aaron.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -84,7 +84,9 @@
 
 <textarea id="myArea03" rows=4 cols=70></textarea>
 <br><br><br><br>
-    <h1>Message Encryption</h1>
+    
+   
+    <h1>64 Bit Message Encryption</h1>
     <label for="message">Enter Message:</label>
     <input type="text" id="message" />
     <br /><br />
@@ -92,7 +94,14 @@
     <br /><br />
     <label for="encrypted">Encrypted Message:</label>
     <input type="text" id="encrypted" />
-    <script>
+    <br /><br />
+    <label for="decrypted">Decrypted Message:</label>
+    <input type="text" id="decrypted" />
+    <br /><br />
+    <button onclick="decryptMessage()">Decrypt</button>
+    
+   
+     <script>
       async function encryptMessage() {
         const message = document.getElementById("message").value;
         const key = await window.crypto.subtle.generateKey(
@@ -109,6 +118,24 @@
         const encryptedArray = Array.from(new Uint8Array(encryptedMessage));
         const encryptedHex = encryptedArray.map(b => ("00" + b.toString(16)).slice(-2)).join("");
         document.getElementById("encrypted").value = encryptedHex;
+      
+         async function decryptMessage() {
+        const encryptedHex = document.getElementById("encrypted").value;
+        const encryptedArray = new Uint8Array(
+          encryptedHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16))
+        );
+        const key = await window.crypto.subtle.generateKey(
+          { name: "AES-GCM", length: 256 },
+          true,
+          ["encrypt", "decrypt"]
+        );
+        const decryptedArray = await window.crypto.subtle.decrypt(
+          { name: "AES-GCM", iv: encryptedArray.slice(0, 12) },
+          key,
+          encryptedArray.slice(12)
+        );
+        const decryptedMessage = new TextDecoder().decode(decryptedArray);
+        document.getElementById("decrypted").value = decryptedMessage;
       }
     </script>
 </body>
