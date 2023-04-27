@@ -135,9 +135,9 @@ function reloadall() {
     "Spice/click: " + addcomma(moneyup) + " | Spice/sec: " + addcomma(msec);
   document.getElementById("total").innerHTML = "Spice: " + addcomma(money);
   document.getElementById("cat").innerHTML =
-    catown + "-clicker cat: " + addcomma(catcost) + " | +" + addcomma(catadd) + "/sec";
+    catown + "-clicker cat: " + addcomma(catcost) + " | +" + addcomma(catadd) + "Spice/sec";
   document.getElementById("worker").innerHTML =
-    workerown + "-worker: " + addcomma(workercost) + " | +" + addcomma(workadd) + "/sec";
+    workerown + "-worker: " + addcomma(workercost) + " | +" + addcomma(workadd) + "Spice/sec";
   document.getElementById("upgrade").innerHTML =
     addcomma(upown) + "-main upgrade: " + addcomma(upcost);
 }
@@ -250,10 +250,10 @@ function upgrade(name) {
       money -= catcost;
       catcost = catcost * 2;
       document.getElementById("cat").innerHTML =
-        catown + "-clicker cat: " + addcomma(catcost) + " | +" + addcomma(catadd * cboost) + "/sec";
+        catown + "-clicker cat: " + addcomma(catcost) + " | +" + addcomma(catadd * cboost) + "Spice/sec";
     } else if (catown == 50) {
       document.getElementById("cat").innerHTML =
-        catown + "-clicker cat: MAX | +15% click/sec";
+        catown + "-clicker cat: MAX | +15% Spice/sec";
     }
   }
 
