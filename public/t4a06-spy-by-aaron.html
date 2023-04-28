@@ -1,6 +1,6 @@
 <html>
 <body>
-<h6>version 0.0.9</h6>
+<h6>version 0.1.0</h6>
 <h1 align=center>t2a06-spy-by-aaron.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -121,6 +121,10 @@
 
       async function decryptMessage() {
         const encryptedHex = document.getElementById("encrypted").value;
+        if (!key) {
+          alert("Key is missing. Please encrypt a message first.");
+          return;
+        }
         const encryptedArray = new Uint8Array(
           encryptedHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16))
         );
