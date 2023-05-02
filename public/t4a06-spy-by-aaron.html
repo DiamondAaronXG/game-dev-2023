@@ -1,6 +1,6 @@
 <html>
 <body>
-<h6>version 0.1.1</h6>
+<h6>version 0.1.2</h6>
 <h1 align=center>t2a06-spy-by-aaron.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -85,7 +85,7 @@
 <textarea id="myArea03" rows=4 cols=70></textarea>
 <br><br><br><br>
     
-    <h1>256 Bit Message Encryption</h1>
+<h1>256 Bit Message Encryption</h1>
 <label for="message">Enter Message:</label>
 <input type="text" id="message" />
 <br /><br />
@@ -98,7 +98,6 @@
 <input type="text" id="decrypted" />
 <br /><br />
 <button onclick="decryptMessage()">Decrypt</button>
-
 <script>
   let key;
 
@@ -115,20 +114,24 @@
       key,
       encodedMessage
     );
-    const encryptedArray = Array.from(new Uint8Array(encryptedMessage));
-    const encryptedHex = encryptedArray.map(b => ("00" + b.toString(16)).slice(-2)).join("");
+    const encryptedArray = new Uint8Array(encryptedMessage);
+    const encryptedHex = Array.from(encryptedArray).map(b => ("00" + b.toString(16)).slice(-2)).join("");
     document.getElementById("encrypted").value = encryptedHex;
   }
 
   async function decryptMessage() {
     const encryptedHex = document.getElementById("encrypted").value;
+    if (!key) {
+      alert("Key is missing. Please encrypt a message first.");
+      return;
+    }
     const encryptedArray = new Uint8Array(
       encryptedHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16))
     );
     const decryptedArray = await window.crypto.subtle.decrypt(
       { name: "AES-GCM", iv: encryptedArray.slice(0, 12) },
       key,
-      encryptedArray.slice(12)
+      encryptedArray
     );
     const decryptedMessage = new TextDecoder().decode(decryptedArray);
     document.getElementById("decrypted").value = decryptedMessage;
