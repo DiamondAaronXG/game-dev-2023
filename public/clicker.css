@@ -1,0 +1,73 @@
+body {
+  margin:0px;
+}
+.center {
+  margin: 40px;
+}
+.topbar{
+  overflow: hidden;
+  background: #C8CBD0;
+  box-shadow: 0px 4px 0 0 #4D5259;
+}
+
+.topbar a {
+  background: #748E54;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  box-shadow: 4px 0px 0 0 #54673C;
+}
+
+.topbar a:hover {
+  background-color: #92AC72;
+  color: black;
+}
+
+.topbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.round{
+  font-size: 12px;
+  color: #4D5259;
+  line-height: 1.5;
+  font-weight: bold;
+  padding: .5em 2em;
+  background: #FFFFFF;
+  border: 2px solid #4D5259;
+  box-shadow: 4px 4px 0 0 #4D5259;
+  border-radius: 100px;
+  outline:0;
+  transition: ease all .1s;
+} 
+.round:active {
+  transform: translateY(4px) translateX(4px);
+  box-shadow: 0px 0px 0 0 #4D5259;
+}
+.round:hover {
+  background: #d3d3d3;
+}
+
+.settings {
+  font-size: 10px;
+  color: #4D5259;
+  line-height: 1.5;
+  font-weight: bold;
+  padding: .5em 2em;
+  background: #FFFFFF;
+  border: 2px solid #4D5259;
+  box-shadow: 4px 4px 0 0 #4D5259;
+  outline:0;
+}
+
+.settings:active {
+  transform: translateY(4px) translateX(4px);
+  box-shadow: 0px 0px 0 0 #4D5259;
+}
+.settings:hover {
+  background: #d3d3d3;
+}
