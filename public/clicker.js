@@ -29,22 +29,24 @@ function addcomma(x) {
 function reloadall() {
   document.getElementById("click").innerHTML =
     "Spice/click: " + addcomma(moneyup) + " | Spice/sec: " + addcomma(msec);
-  
+
   document.getElementById("total").innerHTML = 
     "Spice: " + addcomma(money);
-  
+
   document.getElementById("cat").innerHTML =
     catown + "-clicker cat: " + addcomma(catcost) + " | +" + addcomma(catadd) + "Spice/sec";
   document.getElementById("Nani").innerHTML =
   "1 Nani - " + catcost + " Spice +1spice/sec";
-  
+
   document.getElementById("worker").innerHTML =
     workerown + "-worker: " + addcomma(workercost) + " | +" + addcomma(workadd) + "Spice/sec";
+  document.getElementById("Factory").innerHTML =
+  "1 Factory - " + workercost + " Spice +15spice/sec";
 
-  
   document.getElementById("upgrade").innerHTML =
     addcomma(upown) + "-main upgrade: " + addcomma(upcost);
-
+  document.getElementById("More Spice").innerHTML =
+  "1 More Spice per Click - " + upcost + " Spice";
 }
 //overwrites save file
 function save() {
@@ -121,7 +123,7 @@ function clicked() {
 function upgrade(name) {
   if (name == "clicker cat") {
     if (money >= catcost && catown < 50) {
-      
+
       if (catown <= 13) {
         msec += catadd;
         catadd++;
@@ -158,11 +160,11 @@ function upgrade(name) {
       reloadall();
     }
   }
-  
-  
+
+
   if (name == "worker") {
     if (money >= workercost && workerown < 50) {
-      
+
       if (workerown <= 13) {
         msec += workadd;
         workadd++;
