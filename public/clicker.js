@@ -40,13 +40,11 @@ function reloadall() {
   
   document.getElementById("worker").innerHTML =
     workerown + "-worker: " + addcomma(workercost) + " | +" + addcomma(workadd) + "Spice/sec";
-  document.getElementById("Factory").innerHTML =
-  "1 Factory - " + workercost + " Spice +15spice/sec";
+
   
   document.getElementById("upgrade").innerHTML =
     addcomma(upown) + "-main upgrade: " + addcomma(upcost);
-  document.getElementById("More Spice").innerHTML =
-  "1 More Spice per Click - " + upcost + " Spice";
+
 }
 //overwrites save file
 function save() {
