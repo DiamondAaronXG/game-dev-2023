@@ -2,16 +2,16 @@ money = 0;
 moneyup = 1;
 msec = 0;
 upcost = 15;
-catcost = 25;
+nanicost = 25;
 workercost = 250;
 upown = 0;
-catown = 0;
+naniown = 0;
 workerown = 0;
-catadd = 1;
+naniadd = 1;
 workadd = 15;
 cboost = 1;
 wboost = 1;
-catmax = 0;
+nanimax = 0;
 workmax = 0;
 
 //save before exiting
@@ -33,10 +33,10 @@ function reloadall() {
   document.getElementById("total").innerHTML = 
     "Spice: " + addcomma(money);
 
-  document.getElementById("cat").innerHTML =
-    catown + "-clicker cat: " + addcomma(catcost) + " | +" + addcomma(catadd) + "Spice/sec";
-  document.getElementById("Nani").innerHTML =
-  "1 Nani - " + catcost + " Spice +1spice/sec";
+  document.getElementById("nani").innerHTML =
+    catown + "-clicker nani: " + addcomma(nanicost) + " | +" + addcomma(naniadd) + "Spice/sec";
+  document.getElementById("nani").innerHTML =
+  "1 Nani - " + nanicost + " Spice +1spice/sec";
 
   document.getElementById("worker").innerHTML =
     workerown + "-worker: " + addcomma(workercost) + " | +" + addcomma(workadd) + "Spice/sec";
@@ -54,18 +54,18 @@ function save() {
   localStorage.setItem("moneyup", moneyup);
   localStorage.setItem("msec", msec);
   localStorage.setItem("upcost", upcost);
-  localStorage.setItem("catcost", catcost);
-  localStorage.setItem("catadd", catadd);
+  localStorage.setItem("nanicost", catcost);
+  localStorage.setItem("naniadd", catadd);
   localStorage.setItem("workercost", workercost);
   localStorage.setItem("workadd", workadd);
-  localStorage.setItem("catown", catown);
+  localStorage.setItem("naniown", catown);
   localStorage.setItem("workerown", workerown);
   localStorage.setItem("upown", upown);
-  localStorage.setItem("catadd", catadd);
+  localStorage.setItem("naniadd", catadd);
   localStorage.setItem("workadd", workadd);
   localStorage.setItem("cboost", cboost);
   localStorage.setItem("wboost", wboost);
-  localStorage.setItem("catmax", catmax);
+  localStorage.setItem("nanimax", catmax);
   localStorage.setItem("workmax", workmax);
 }
 //loads save file
@@ -74,18 +74,18 @@ function load() {
   moneyup = parseInt(localStorage.getItem("moneyup"));
   msec = parseInt(localStorage.getItem("msec"));
   upcost = parseInt(localStorage.getItem("upcost"));
-  catcost = parseInt(localStorage.getItem("catcost"));
-  upown = parseInt(localStorage.getItem("catadd"));
+  catcost = parseInt(localStorage.getItem("nanicost"));
+  upown = parseInt(localStorage.getItem("naniadd"));
   workercost = parseInt(localStorage.getItem("workercost"));
   upown = parseInt(localStorage.getItem("workadd"));
-  catown = parseInt(localStorage.getItem("catown"));
+  catown = parseInt(localStorage.getItem("naniown"));
   workerown = parseInt(localStorage.getItem("workerown"));
   upown = parseInt(localStorage.getItem("upown"));
-  catadd = parseInt(localStorage.getItem("catadd"));
+  catadd = parseInt(localStorage.getItem("naniadd"));
   workadd = parseInt(localStorage.getItem("workadd"));
   cboost = parseInt(localStorage.getItem("cboost"));
   wboost = parseInt(localStorage.getItem("wboost"));
-  catmax = parseInt(localStorage.getItem("catmax"));
+  catmax = parseInt(localStorage.getItem("nanimax"));
   workmax = parseInt(localStorage.getItem("workmax"));
 
   reloadall();
@@ -97,12 +97,12 @@ function reset() {
     moneyup = 1;
     msec = 0;
     upcost = 15;
-    catcost = 25;
+    nanicost = 25;
     workercost = 250;
     catown = 0;
     workerown = 0;
     upown = 0;
-    catadd = 1;
+    naniadd = 1;
     workadd = 15;
     reloadall();
   }
@@ -121,41 +121,41 @@ function clicked() {
 }
 //upgrade function
 function upgrade(name) {
-  if (name == "clicker cat") {
-    if (money >= catcost && catown < 50) {
+  if (name == "clicker nani") {
+    if (money >= nanicost && naniown < 50) {
 
-      if (catown <= 13) {
-        msec += catadd;
-        catadd++;
+      if (naniown <= 13) {
+        msec += naniadd;
+        naniadd++;
         cboost = 1;
-      } else if (catown == 14) {
-        msec += catadd;
+      } else if (naniown == 14) {
+        msec += naniadd;
         catadd++;
         cboost = 200;
-      } else if (catown <= 23) {
-        msec += 200 * catadd;
-        catadd++;
+      } else if (naniown <= 23) {
+        msec += 200 * naniadd;
+        naniadd++;
         cboost = 200;
-      } else if (catown == 24) {
-        msec += 200 * catadd;
-        catadd++;
+      } else if (naniown == 24) {
+        msec += 200 * naniadd;
+        naniadd++;
         cboost = 5000;
-      } else if (catown <= 48) {
-        msec += 5000 * catadd;
-        catadd++;
+      } else if (naniown <= 48) {
+        msec += 5000 * naniadd;
+        naniadd++;
         cboost = 5000;
-      } else if (catown == 49) {
-        msec += 5000 * catadd;
-        catadd++;
+      } else if (naniown == 49) {
+        msec += 5000 * naniadd;
+        naniadd++;
         cboost = 15000;
       } else {
-        msec += 15000 * catadd;
-        catadd++;
+        msec += 15000 * naniadd;
+        naniadd++;
         cboost = 15000;
       }
-      catown += 1;
-      money -= catcost;
-      catcost = catcost * 2;
+      naniown += 1;
+      money -= nanicost;
+      nanicost = nanicost * 2;
       upown++;
       reloadall();
     }
@@ -213,10 +213,10 @@ function upgrade(name) {
       upcost = upcost * 5;
       document.getElementById("upgrade").innerHTML =
         addcomma(upown) + "-main upgrade: " + addcomma(upcost);
-      if (catown == 50) {
-        msec -= catmax;
-        catmax = Math.floor(moneyup * 0.15);
-        msec += catmax;
+      if (naniown == 50) {
+        msec -= nanimax;
+        nanimax = Math.floor(moneyup * 0.15);
+        msec += nanimax;
       }
       if (workerown == 50) {
         msec -= workmax;
