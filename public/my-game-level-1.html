@@ -83,12 +83,12 @@ function myCheckHit(){
   myCheckHit()     // checks for all collisions
 }">
    
-<input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
 
-<input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
@@ -99,7 +99,7 @@ function myCheckHit(){
 
 
 <img id="myImg01" src="mr-lahey-falling.jpg"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
-<img id="myImg02" src="myImgNew.jpg"  style="position:absolute; width:10px; height:200px; left:350px; top:90px;">
+<img id="myImg02" src="myImgNew.jpg"  style="position:absolute; width:10px; height:200px; left:375px; top:90px;">
 <img id="myImg03" src="myImgNew.jpg"  style="position:absolute; width:200px; height:10px; left:500px; top:400px;">
 <img id="myImg04" src="myImgNew.jpg"  style="position:absolute; width:100px; height:80px; left:800px; top:400px;">
 
