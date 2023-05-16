@@ -1,5 +1,5 @@
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg">
-<h6>version 0.0.3</6>
+<h6>version 0.0.4</6>
 <h1 align=center><font color=red>T4A04 Maze by Fred</font></h1>
 
 
@@ -82,6 +82,16 @@ function myCheckHit(){
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }"><br><br>
+
+<input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+  myCheckHit()     // checks for all collisions
+}">
+   
+<input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.bottom = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+  myCheckHit()     // checks for all collisions
+}">
 
 
 
