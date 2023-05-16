@@ -111,6 +111,7 @@ function reset() {
 function myTimer() {
     money += msec;
   document.getElementById("total").innerHTML = "Spice: " + addcomma(money);
+  reloadall();
 }
 setInterval(myTimer, 1000);
 
