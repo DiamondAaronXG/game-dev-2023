@@ -34,19 +34,19 @@ function reloadall() {
     "Asteroid Chunks: " + addcomma(money);
 
   document.getElementById("cat").innerHTML =
-    catown + "-clicker cat: " + addcomma(catcost) + " | +" + addcomma(catadd) + "Asteroid Chunks/sec";
-  document.getElementById("Nani").innerHTML =
-  "1 Nani - " + catcost + " Asteroid Chunks +1Asteroid Chunks/sec";
+    catown + "Asteroid Miner: " + addcomma(catcost) + " | +" + addcomma(catadd) + "Asteroid Chunks/sec";
+  document.getElementById("cat").innerHTML =
+  "1 Asteroid Miner - " + catcost + " Asteroid Chunks +1Asteroid Chunks/sec";
 
   document.getElementById("worker").innerHTML =
-    workerown + "-worker: " + addcomma(workercost) + " | +" + addcomma(workadd) + "Asteroid Chunks/sec";
-  document.getElementById("Factory").innerHTML =
-  "1 Factory - " + workercost + " Asteroid Chunks +15Asteroid Chunks/sec";
+    workerown + "Asteroid Mining Factory: " + addcomma(workercost) + " | +" + addcomma(workadd) + "Asteroid Chunks/sec";
+  document.getElementById("worker").innerHTML =
+  "1 Asteroid Mining Factoru - " + workercost + " Asteroid Chunks +15Asteroid Chunks/sec";
 
   document.getElementById("upgrade").innerHTML =
-    addcomma(upown) + "-main upgrade: " + addcomma(upcost);
-  document.getElementById("More Spice").innerHTML =
-  "1 More Spice per Click - " + upcost + " Asteroid Chunks";
+    addcomma(upown) + "-Asteroid Chunk: " + addcomma(upcost);
+  document.getElementById("upgrade").innerHTML =
+  "1 More Asteroid per Click- " + upcost + " Asteroid Chunks";
 }
 //overwrites save file
 function save() {
