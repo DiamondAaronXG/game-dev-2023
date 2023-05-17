@@ -28,25 +28,25 @@ function addcomma(x) {
 //updates all values
 function reloadall() {
   document.getElementById("click").innerHTML =
-    "Spice/click: " + addcomma(moneyup) + " | Spice/sec: " + addcomma(msec);
+    "Asteroid Chunks/click: " + addcomma(moneyup) + " | Asteroid Chunks/sec: " + addcomma(msec);
 
   document.getElementById("total").innerHTML = 
-    "Spice: " + addcomma(money);
+    "Asteroid Chunks: " + addcomma(money);
 
   document.getElementById("cat").innerHTML =
-    catown + "-clicker cat: " + addcomma(catcost) + " | +" + addcomma(catadd) + "Spice/sec";
+    catown + "-clicker cat: " + addcomma(catcost) + " | +" + addcomma(catadd) + "Asteroid Chunks/sec";
   document.getElementById("Nani").innerHTML =
-  "1 Nani - " + catcost + " Spice +1spice/sec";
+  "1 Nani - " + catcost + " Asteroid Chunks +1Asteroid Chunks/sec";
 
   document.getElementById("worker").innerHTML =
-    workerown + "-worker: " + addcomma(workercost) + " | +" + addcomma(workadd) + "Spice/sec";
+    workerown + "-worker: " + addcomma(workercost) + " | +" + addcomma(workadd) + "Asteroid Chunks/sec";
   document.getElementById("Factory").innerHTML =
-  "1 Factory - " + workercost + " Spice +15spice/sec";
+  "1 Factory - " + workercost + " Asteroid Chunks +15Asteroid Chunks/sec";
 
   document.getElementById("upgrade").innerHTML =
     addcomma(upown) + "-main upgrade: " + addcomma(upcost);
   document.getElementById("More Spice").innerHTML =
-  "1 More Spice per Click - " + upcost + " Spice";
+  "1 More Spice per Click - " + upcost + " Asteroid Chunks";
 }
 //overwrites save file
 function save() {
