@@ -41,7 +41,7 @@ function reloadall() {
   document.getElementById("worker").innerHTML =
     workerown + "Asteroid Mining Factory: " + addcomma(workercost) + " | +" + addcomma(workadd) + "Asteroid Chunks/sec";
   document.getElementById("worker").innerHTML =
-  "1 Asteroid Mining Factoru - " + workercost + " Asteroid Chunks +15Asteroid Chunks/sec";
+  "1 Asteroid Mining Factory - " + workercost + " Asteroid Chunks +15Asteroid Chunks/sec";
 
   document.getElementById("upgrade").innerHTML =
     addcomma(upown) + "-Asteroid Chunk: " + addcomma(upcost);
