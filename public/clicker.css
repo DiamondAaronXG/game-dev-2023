@@ -1,6 +1,8 @@
 body {
   background-image:url('space.gif'); background-repeat:repeat; }
-
+{
+  background-repeat: no-repeat;
+}
 {
   margin:0px;
 }
