@@ -46,7 +46,7 @@ function reloadall() {
   document.getElementById("upgrade").innerHTML =
     addcomma(upown) + "-Asteroid Chunk: " + addcomma(upcost);
   document.getElementById("upgrade").innerHTML =
-  "1 More Asteroid per Click- " + upcost + " Asteroid Chunks";
+  "1 More Asteroid per Click- " + upcost + " Asteroid Chunks +1Asteroid Chunk/click";
 }
 //overwrites save file
 function save() {
