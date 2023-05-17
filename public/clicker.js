@@ -110,7 +110,7 @@ function reset() {
 //timer
 function myTimer() {
     money += msec;
-  document.getElementById("total").innerHTML = "Spice: " + addcomma(money);
+  document.getElementById("total").innerHTML = "Asteroid Chunks: " + addcomma(money);
   reloadall();
 }
 setInterval(myTimer, 1000);
@@ -118,7 +118,7 @@ setInterval(myTimer, 1000);
 //what happens when button is clicked
 function clicked() {
   money += moneyup;
-  document.getElementById("total").innerHTML = "Spice: " + addcomma(money);
+  document.getElementById("total").innerHTML = "Asteroid Chunks: " + addcomma(money);
 }
 //upgrade function
 function upgrade(name) {
@@ -228,6 +228,6 @@ function upgrade(name) {
   }
 
   document.getElementById("click").innerHTML =
-    "Spice/click: " + addcomma(moneyup) + " | Spice/sec: " + addcomma(msec);
-  document.getElementById("total").innerHTML = "Spice: " + addcomma(money);
+    "Asteroid Chunks/click: " + addcomma(moneyup) + " | Asteroid Chunks/sec: " + addcomma(msec);
+  document.getElementById("total").innerHTML = "Asteroid Chunks: " + addcomma(money);
 }
