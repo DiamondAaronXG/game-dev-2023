@@ -1,9 +1,6 @@
 body {
-  background-image:url('space.gif'); background-repeat:no-repeat; }
-selector {
-  color: value('cyan');
+  background-image:url('space.gif'); background-repeat:no-repeat; color:cyan;
 }
-
 
 {
   margin:0px;
