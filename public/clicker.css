@@ -1,77 +1,139 @@
 body {
+body {
+  background-image:url('space.gif'); background-repeat:no-repeat; color:cyan;
   background-image:url('space.gif'); background-repeat:no-repeat; color:cyan;
 }
-
+}
+{
 {
   margin:0px;
+  margin:0px;
+}
 }
 .center {
+.center {
+  margin: 40px;
   margin: 40px;
 }
+}
+.topbar{
 .topbar{
   overflow: hidden;
+  overflow: hidden;
+  background: #C8CBD0;
   background: #C8CBD0;
   box-shadow: 0px 4px 0 0 #4D5259;
+  box-shadow: 0px 4px 0 0 #4D5259;
 }
-
+}
+.topbar a {
 .topbar a {
   background: #748E54;
+  background: #748E54;
+  float: left;
   float: left;
   color: #f2f2f2;
+  color: #f2f2f2;
+  text-align: center;
   text-align: center;
   padding: 14px 16px;
+  padding: 14px 16px;
+  text-decoration: none;
   text-decoration: none;
   font-size: 17px;
+  font-size: 17px;
+  box-shadow: 4px 0px 0 0 #54673C;
   box-shadow: 4px 0px 0 0 #54673C;
 }
-
+}
+.topbar a:hover {
 .topbar a:hover {
   background-color: #92AC72;
+  background-color: #92AC72;
+  color: black;
   color: black;
 }
-
+}
+.topbar a.active {
 .topbar a.active {
   background-color: #4CAF50;
+  background-color: #4CAF50;
+  color: white;
   color: white;
 }
-
+}
+.round{
 .round{
   font-size: 12px;
+  font-size: 12px;
+  color: #4D5259;
   color: #4D5259;
   line-height: 1.5;
+  line-height: 1.5;
   font-weight: bold;
+  font-weight: bold;
+
+  margin: 0px;
+  background: deeppink;
   background: deeppink;
   border: 2px solid #4D5259;
-  box-shadow: 4px 4px 0 0 #4D5259;
-  border-radius: 100px;
-  outline:0;
-  transition: ease all .1s;
-} 
-
-.round:active {
-  transform: translateY(4px) translateX(4px);
-  box-shadow: 0px 0px 0 0 #4D5259;
-}
-.round:hover {
-  background: #d3d3d3;
-}
-
-.settings {
-  font-size: 10px;
-  color: #4D5259;
-  line-height: 1.5;
-  font-weight: bold;
-  padding: .5em 2em;
-  background: #FFFFFF;
   border: 2px solid #4D5259;
   box-shadow: 4px 4px 0 0 #4D5259;
+  box-shadow: 4px 4px 0 0 #4D5259;
+  border-radius: 100px;
+  border-radius: 100px;
   outline:0;
-}
-
-.settings:active {
+  outline:0;
+  transition: ease all .1s;
+  transition: ease all .1s;
+} 
+} 
+.round:active {
+.round:active {
+  transform: translateY(4px) translateX(4px);
   transform: translateY(4px) translateX(4px);
   box-shadow: 0px 0px 0 0 #4D5259;
+  box-shadow: 0px 0px 0 0 #4D5259;
+}
+}
+.round:hover {
+.round:hover {
+  background: #d3d3d3;
+  background: #d3d3d3;
+}
+}
+.settings {
+.settings {
+  font-size: 10px;
+  font-size: 10px;
+  color: #4D5259;
+  color: #4D5259;
+  line-height: 1.5;
+  line-height: 1.5;
+  font-weight: bold;
+  font-weight: bold;
+  padding: .5em 2em;
+  padding: .5em 2em;
+  background: #FFFFFF;
+  background: #FFFFFF;
+  border: 2px solid #4D5259;
+  border: 2px solid #4D5259;
+  box-shadow: 4px 4px 0 0 #4D5259;
+  box-shadow: 4px 4px 0 0 #4D5259;
+  outline:0;
+  outline:0;
+}
+}
+.settings:active {
+.settings:active {
+  transform: translateY(4px) translateX(4px);
+  transform: translateY(4px) translateX(4px);
+  box-shadow: 0px 0px 0 0 #4D5259;
+  box-shadow: 0px 0px 0 0 #4D5259;
+}
 }
 .settings:hover {
+.settings:hover {
+  background: #d3d3d3;
   background: #d3d3d3;
 }
