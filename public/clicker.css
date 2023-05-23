@@ -43,7 +43,7 @@ body {
   background: deeppink;
   border: 2px solid #4D5259;
   box-shadow: 4px 4px 0 0 #4D5259;
-  border-radius: 0px;
+  border-radius: 100px;
   outline:0;
   transition: ease all .1s;
 } 
