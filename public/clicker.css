@@ -47,7 +47,7 @@ body {
   border-radius: 100px;
   outline:0;
   transition: ease all .1s;
-  backround-color: DeepPink;
+  background-color: DeepPink;
 } 
 
 .round:active {
