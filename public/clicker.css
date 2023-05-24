@@ -42,7 +42,7 @@ body {
   font-weight: bold;
   padding: .5em 2em;
   background: DeepPink;
-  background-size: cover;
+  background-size:300px;
   border: 2px solid #4D5259;
   box-shadow: 4px 4px 0 0 #4D5259;
   border-radius: 100px;
