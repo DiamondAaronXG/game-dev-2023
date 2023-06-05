@@ -13,7 +13,7 @@ cboost = 1;
 wboost = 1;
 catmax = 0;
 workmax = 0;
-
+let mySound1 = new Audio(".mp3")
 //save before exiting
 function closingCode() {
   if (confirm("You have closed the window, would you like to save?") === true) {
