@@ -12,7 +12,17 @@ Asteroid Clicker
 </audio>
 
 
-<body onbeforeunload="return closingCode()">
+<body onbeforeunload="return closingCode()" style:" .meteors
+  - var meteors = 0
+  while meteors < 10
+    .meteor
+    - meteors++
+.stars
+  - var stars = 0
+  while stars < 20
+    .star
+    - stars++
+">
   <div class='topbar'>
   </div>
     <center class='center'>
@@ -31,17 +41,6 @@ Asteroid Clicker
       <button style="position:absolute;top: 20;left:180;" class="settings" onclick="reset()">Reset</button>
     </center>
 </body>
-
-.meteors
-  - var meteors = 0
-  while meteors < 10
-    .meteor
-    - meteors++
-.stars
-  - var stars = 0
-  while stars < 20
-    .star
-    - stars++
 
 <script src="clicker.js"></script>       
 
