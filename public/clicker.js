@@ -232,7 +232,7 @@ function upgrade(name) {
   document.getElementById("total").innerHTML = "Asteroid Chunks: " + addcomma(money);
 }
 
-(function() {
+function myMeteor() {
   var reset = function(e) {
     e.target.className = '';
     setTimeout(function() {
@@ -243,4 +243,4 @@ function upgrade(name) {
   for(var i = 0; i < meteors.length; i++) {
     meteors[i].addEventListener('animationend', reset);
   }
-}());
+};
